@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Lucky Lakshmi ❤️</title>
+
+<link rel="stylesheet"
+href="style.css">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- Floating Hearts -->
+
+<div id="heart-container"></div>
+
+<!-- Password Screen -->
+
+<section id="passwordScreen"
+class="screen active">
+
+<div class="glass">
+
+<h1>
+
+❤️
+
+</h1>
+
+<h2>
+
+Welcome
+
+</h2>
+
+<p>
+
+This page is made for someone special.
+
+</p>
+
+<input
+type="password"
+id="password"
+placeholder="Enter Secret Code"
+maxlength="4">
+<button
+onclick="checkPassword()">
+
+Open ❤️
+
+</button>
+
+<p id="wrongPassword"></p>
+
+</div>
+
+</section>
+
+<!-- Welcome Screen -->
+
+<section
+id="welcomeScreen"
+class="screen">
+
+<h1 class="typing">
+
+Touch My Lucky Jersey
+
+</h1>
+<div id="jersey">
+
+    <div class="rope"></div>
+
+    <div class="hanger"></div>
+
+    <div class="jerseyGlow"></div>
+
+    <img
+        src="assets/jersey.png"
+        id="jerseyImage"
+        alt="Lucky Jersey"
+        draggable="false"> 
+</div>
+<p>
+
+Every player's jersey has a lucky number...
+
+Mine reminds me of someone special.
+
+❤️
+
+</p>
+
+</section>
+
+<!-- Lucky Number Screen -->
+
+<section
+id="luckyNumberScreen"
+class="screen">
+
+<div class="glass bigCard">
+
+<h1>
+
+🎲
+
+</h1>
+
+<h2>
+
+Choose My Lucky Number
+
+</h2>
+
+<p>
+
+Let's see if you really know me ❤️
+
+</p>
+
+<div class="numberGrid">
+
+<button
+class="numberBtn"
+data-number="03">
+
+03
+
+</button>
+
+<button
+class="numberBtn"
+data-number="07">
+
+07
+
+</button>
+
+<button
+class="numberBtn"
+data-number="12">
+
+12
+
+</button>
+
+<button
+class="numberBtn"
+data-number="13">
+
+13
+
+</button>
+
+</div>
+
+<div
+id="numberMessage"
+class="messageBox">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Favourite Screen -->
+
+<section
+id="favoriteScreen"
+class="screen">
+
+<div class="glass bigCard">
+
+<h1>
+
+❤️
+
+</h1>
+
+<h2>
+
+Who Is My Favourite?
+
+</h2>
+
+<p>
+
+Choose carefully...
+
+</p>
+
+<div class="optionGrid">
+
+<button
+class="optionBtn"
+data-answer="cricket">
+
+🏏 Cricket
+
+</button>
+
+<button
+class="optionBtn"
+data-answer="games">
+
+🎮 Games
+
+</button>
+
+<button
+class="optionBtn"
+data-answer="study">
+
+📚 Study
+
+</button>
+
+<button
+id="youOption"
+class="optionBtn hiddenOption"
+data-answer="you">
+
+❤️ You
+
+</button>
+</div>
+
+<div
+id="favoriteMessage"
+class="messageBox">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Lucky Lakshmi Screen -->
+
+<section
+id="lakshmiScreen"
+class="screen">
+
+<div class="glass hugeCard">
+
+<h1>
+
+💖
+
+</h1>
+
+<h2>
+
+Just One More Thing...
+
+</h2>
+
+<div
+id="typingMessage">
+
+</div>
+
+<button
+id="continueBtn">
+
+Continue ❤️
+
+</button>
+
+</div>
+
+</section>
+
+<!-- Final Proposal -->
+
+<section
+id="proposalScreen"
+class="screen">
+
+<div class="glass hugeCard">
+
+<h1>
+
+🌸
+
+</h1>
+
+<h2>
+
+Can I Ask You Something?
+
+</h2>
+
+<p>
+
+Can you become my dosa?
+
+😋❤️
+
+</p>
+
+<p>
+
+Because...
+
+I'd never want to share you with anyone.
+
+</p>
+
+<p>
+
+Will You Stay With Me?
+
+💖
+
+</p>
+
+<div class="proposalButtons">
+
+<button
+id="yesBtn">
+
+YES ❤️
+
+</button>
+
+<button
+id="noBtn">
+
+NO 🙈
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Heart Explosion -->
+
+<div
+id="heartExplosion">
+
+</div>
+
+<!-- Rose Petals -->
+
+<div
+id="roseContainer"></div>
+<!-- Music Button -->
+
+<button id="musicButton">
+
+🎵
+
+</button>
+
+<!-- Background Music -->
+
+<audio
+id="backgroundMusic"
+loop>
+
+<source
+src="assets/music.mp3"
+type="audio/mpeg">
+
+</audio>
+
+<!-- Loading Screen -->
+
+<div
+id="loading">
+
+<div class="loadingHeart">
+
+❤️
+
+</div>
+
+<h2>
+
+Preparing Something Special...
+
+</h2>
+
+</div>
+
+<!-- Dark Overlay -->
+
+<div
+id="overlay">
+
+</div>
+
+<!-- Sparkle Container -->
+
+<div
+id="sparkles">
+
+</div>
+
+<!-- Confetti -->
+
+<div
+id="confetti">
+
+</div>
+
+
+</div>
+
+<script
+src="script.js">
+
+</script>
+
+</body>
+
+</html>

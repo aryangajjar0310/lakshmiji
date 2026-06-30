@@ -1,0 +1,1289 @@
+/* ==========================================
+          LUCKY LAKSHMI V5
+        Premium Romantic Theme
+========================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+:root{
+
+--primary:#ff4d94;
+--secondary:#ff82b2;
+--glass:rgba(255,255,255,.15);
+--glassBorder:rgba(255,255,255,.25);
+
+}
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+body{
+
+font-family:"Poppins",sans-serif;
+
+overflow:hidden;
+
+height:100vh;
+
+background:
+linear-gradient(
+135deg,
+#ffb7d5,
+#ff82b2,
+#ff4d94,
+#ffc8df);
+
+background-size:400% 400%;
+
+animation:bgMove 18s ease infinite;
+
+color:white;
+
+}
+
+/* ========================================== */
+
+@keyframes bgMove{
+
+0%{
+
+background-position:0% 50%;
+
+}
+
+50%{
+
+background-position:100% 50%;
+
+}
+
+100%{
+
+background-position:0% 50%;
+
+}
+
+}
+
+/* ========================================== */
+
+.screen{
+
+position:absolute;
+
+inset:0;
+
+display:none;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+padding:25px;
+
+text-align:center;
+
+opacity:0;
+
+transition:.8s;
+
+}
+
+.screen.active{
+
+display:flex;
+
+opacity:1;
+
+animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:
+translateY(35px)
+scale(.95);
+
+}
+
+to{
+
+opacity:1;
+
+transform:none;
+
+}
+
+}
+
+/* ========================================== */
+
+.glass{
+
+position:relative;
+
+background:var(--glass);
+
+border:1px solid var(--glassBorder);
+
+backdrop-filter:blur(18px);
+
+-webkit-backdrop-filter:blur(18px);
+
+padding:35px;
+
+border-radius:30px;
+
+overflow:hidden;
+
+box-shadow:
+
+0 20px 60px rgba(0,0,0,.18);
+
+}
+
+/* Shine */
+
+.glass::before{
+
+content:"";
+
+position:absolute;
+
+left:-120px;
+
+top:-50px;
+
+width:80px;
+
+height:400px;
+
+background:
+
+rgba(255,255,255,.18);
+
+transform:rotate(25deg);
+
+animation:shine 7s linear infinite;
+
+}
+
+@keyframes shine{
+
+0%{
+
+left:-120px;
+
+}
+
+100%{
+
+left:130%;
+
+}
+
+}
+
+/* ========================================== */
+
+h1{
+
+font-size:3rem;
+
+margin-bottom:15px;
+
+}
+
+h2{
+
+font-size:2rem;
+
+margin-bottom:12px;
+
+}
+
+p{
+
+line-height:1.8;
+
+opacity:.95;
+
+}
+
+input{
+
+margin-top:20px;
+
+width:320px;
+
+max-width:90%;
+
+padding:15px;
+
+border:none;
+
+outline:none;
+
+border-radius:50px;
+
+font-family:Poppins;
+
+font-size:17px;
+
+}
+
+button{
+
+margin-top:20px;
+
+padding:15px 34px;
+
+border:none;
+
+border-radius:50px;
+
+font-size:17px;
+
+font-weight:600;
+
+font-family:Poppins;
+
+cursor:pointer;
+
+transition:.35s;
+
+background:white;
+
+color:var(--primary);
+
+box-shadow:
+
+0 15px 30px rgba(0,0,0,.15);
+
+}
+
+button:hover{
+
+transform:
+
+translateY(-6px)
+
+scale(1.05);
+
+}
+
+button:active{
+
+transform:scale(.95);
+
+}
+
+/* ========================================== */
+
+#heart-container{
+
+position:fixed;
+
+inset:0;
+
+overflow:hidden;
+
+pointer-events:none;
+
+z-index:-1;
+
+}
+
+.bgHeart{
+
+position:absolute;
+
+bottom:-80px;
+
+opacity:.25;
+
+animation:floatHeart linear forwards;
+
+}
+
+@keyframes floatHeart{
+
+0%{
+
+transform:
+translateY(0)
+scale(.4);
+
+opacity:0;
+
+}
+
+15%{
+
+opacity:.5;
+
+}
+
+100%{
+
+transform:
+translateY(-120vh)
+scale(1.4);
+
+opacity:0;
+
+}
+
+}
+/* ==========================================
+            WELCOME SCREEN
+========================================== */
+
+#welcomeScreen{
+
+    gap:18px;
+
+}
+
+.typing{
+
+    font-size:3.2rem;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    text-shadow:
+
+    0 0 15px rgba(255,255,255,.45);
+
+}
+
+/* ==========================================
+               PNG JERSEY
+========================================== */
+
+#jersey{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-top:15px;
+
+    cursor:pointer;
+
+    transition:.45s;
+
+}
+
+#jersey:hover{
+
+    transform:scale(1.04);
+
+}
+
+/* Rope */
+
+.rope{
+
+    width:4px;
+
+    height:90px;
+
+    background:white;
+
+    border-radius:30px;
+
+    box-shadow:0 0 12px rgba(255,255,255,.6);
+
+}
+
+/* Hanger */
+
+.hanger{
+
+    width:120px;
+
+    height:18px;
+
+    border-top:4px solid white;
+
+    border-radius:50%;
+
+    margin-bottom:8px;
+
+}
+
+/* Glow Behind Jersey */
+
+.jerseyGlow{
+
+    position:absolute;
+
+    width:320px;
+
+    height:320px;
+
+    background:radial-gradient(circle,
+
+    rgba(255,255,255,.45),
+
+    transparent 70%);
+
+    filter:blur(35px);
+
+    animation:glowPulse 3s ease-in-out infinite;
+
+    z-index:-1;
+
+}
+
+@keyframes glowPulse{
+
+0%{
+
+opacity:.4;
+
+transform:scale(.9);
+
+}
+
+50%{
+
+opacity:1;
+
+transform:scale(1.1);
+
+}
+
+100%{
+
+opacity:.4;
+
+transform:scale(.9);
+
+}
+
+}
+
+/* Jersey Image */
+
+#jerseyImage{
+
+    width:250px;
+
+    user-select:none;
+
+    pointer-events:none;
+
+    filter:
+
+    drop-shadow(
+
+    0 20px 35px rgba(0,0,0,.25));
+
+    animation:jerseySwing 3.2s ease-in-out infinite;
+
+    transition:.45s;
+
+}
+
+#jersey:hover #jerseyImage{
+
+    transform:scale(1.08);
+
+}
+
+@keyframes jerseySwing{
+
+0%{
+
+transform:rotate(-5deg);
+
+}
+
+50%{
+
+transform:rotate(5deg);
+
+}
+
+100%{
+
+transform:rotate(-5deg);
+
+}
+
+}
+
+/* ==========================================
+          MUSIC BUTTON
+========================================== */
+
+#musicButton{
+
+    position:fixed;
+
+    top:20px;
+
+    right:20px;
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:50%;
+
+    border:none;
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(15px);
+
+    color:white;
+
+    font-size:24px;
+
+    z-index:9999;
+
+    margin:0;
+
+    transition:.35s;
+
+}
+
+#musicButton:hover{
+
+    transform:rotate(18deg) scale(1.08);
+
+    background:white;
+
+    color:var(--primary);
+
+}
+
+#musicButton.playing{
+
+    box-shadow:
+
+    0 0 25px rgba(255,255,255,.75);
+
+}
+
+/* ==========================================
+            LOADING
+========================================== */
+
+#loading{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    background:linear-gradient(135deg,#ff7eb3,#ff4d94);
+
+    z-index:99999;
+
+    transition:.8s;
+
+}
+
+#loading.hide{
+
+    opacity:0;
+
+    visibility:hidden;
+
+}
+
+.loadingHeart{
+
+    font-size:70px;
+
+    animation:heartBeat 1s infinite;
+
+}
+
+@keyframes heartBeat{
+
+0%,100%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.18);
+
+}
+
+}
+/* ==========================================
+           LUCKY NUMBER SCREEN
+========================================== */
+
+#luckyNumberScreen .glass{
+
+    max-width:700px;
+
+    width:95%;
+
+}
+
+.numberGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:22px;
+
+    margin-top:35px;
+
+}
+
+.numberBtn{
+
+    width:130px;
+
+    height:130px;
+
+    border-radius:28px;
+
+    font-size:40px;
+
+    font-weight:700;
+
+    color:white;
+
+    background:rgba(255,255,255,.15);
+
+    border:2px solid rgba(255,255,255,.25);
+
+    backdrop-filter:blur(18px);
+
+    transition:.35s;
+
+}
+
+.numberBtn:hover{
+
+    transform:
+    translateY(-8px)
+    rotate(-2deg)
+    scale(1.06);
+
+    background:white;
+
+    color:var(--primary);
+
+    box-shadow:
+    0 20px 35px rgba(255,255,255,.35);
+
+}
+
+.numberBtn.correct{
+
+    animation:correctPop .8s;
+
+}
+
+@keyframes correctPop{
+
+0%{transform:scale(1);}
+40%{transform:scale(1.2);}
+100%{transform:scale(1);}
+
+}
+
+.numberBtn.wrong{
+
+    animation:wrongShake .45s;
+
+}
+
+@keyframes wrongShake{
+
+0%{transform:translateX(0);}
+20%{transform:translateX(-10px);}
+40%{transform:translateX(10px);}
+60%{transform:translateX(-8px);}
+80%{transform:translateX(8px);}
+100%{transform:translateX(0);}
+
+}
+
+/* ==========================================
+          MESSAGE BOX
+========================================== */
+
+.messageBox{
+
+    margin-top:30px;
+
+    min-height:70px;
+
+    font-size:20px;
+
+    font-weight:500;
+
+    line-height:1.8;
+
+}
+
+/* ==========================================
+           FAVOURITE SCREEN
+========================================== */
+
+.optionGrid{
+
+    display:grid;
+
+    gap:18px;
+
+    margin-top:30px;
+
+}
+
+.optionBtn{
+
+    width:340px;
+
+    max-width:100%;
+
+    background:rgba(255,255,255,.15);
+
+    color:white;
+
+    border:2px solid rgba(255,255,255,.2);
+
+}
+
+.optionBtn:hover{
+
+    background:white;
+
+    color:var(--primary);
+
+}
+
+.hiddenOption{
+
+    opacity:.45;
+
+    transform:scale(.92);
+
+    font-size:14px;
+
+}
+
+.hiddenOption:hover{
+
+    opacity:1;
+
+}
+
+/* ==========================================
+        LUCKY LAKSHMI SCREEN
+========================================== */
+
+#typingMessage{
+
+    min-height:180px;
+
+    margin-top:25px;
+
+    font-size:25px;
+
+    font-weight:500;
+
+    line-height:2;
+
+    text-shadow:
+
+    0 0 18px rgba(255,255,255,.5);
+
+}
+
+#continueBtn{
+
+    display:none;
+
+}
+
+/* ==========================================
+          PROPOSAL SCREEN
+========================================== */
+
+.proposalButtons{
+
+    margin-top:35px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+}
+
+#yesBtn{
+
+    background:white;
+
+    color:var(--primary);
+
+}
+
+#yesBtn:hover{
+
+    transform:scale(1.08);
+
+}
+
+#noBtn{
+
+    background:rgba(255,255,255,.15);
+
+    color:white;
+
+}
+
+/* ==========================================
+         HEART EXPLOSION AREA
+========================================== */
+
+#heartExplosion,
+#roseContainer,
+#sparkles,
+#confetti{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+}
+/* ==========================================
+          OVERLAY
+========================================== */
+
+#overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.5s;
+
+    z-index:50;
+
+}
+
+#overlay.show{
+
+    opacity:1;
+
+}
+
+/* ==========================================
+        FLOATING HEARTS
+========================================== */
+
+.heart{
+
+    position:absolute;
+
+    bottom:-60px;
+
+    font-size:22px;
+
+    opacity:.35;
+
+    pointer-events:none;
+
+    animation:heartFloat linear forwards;
+
+}
+
+@keyframes heartFloat{
+
+0%{
+
+transform:
+translateY(0)
+scale(.4);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:.6;
+
+}
+
+100%{
+
+transform:
+translateY(-120vh)
+rotate(360deg)
+scale(1.5);
+
+opacity:0;
+
+}
+
+}
+
+/* ==========================================
+          ROSE PETALS
+========================================== */
+
+.rose{
+
+    position:absolute;
+
+    top:-60px;
+
+    width:22px;
+
+    animation:roseFall linear forwards;
+
+}
+
+@keyframes roseFall{
+
+0%{
+
+transform:
+translateY(-60px)
+rotate(0deg);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:
+translateY(120vh)
+rotate(720deg);
+
+opacity:0;
+
+}
+
+}
+
+/* ==========================================
+          SPARKLES
+========================================== */
+
+.sparkle{
+
+    position:absolute;
+
+    width:8px;
+
+    height:8px;
+
+    background:white;
+
+    border-radius:50%;
+
+    box-shadow:
+
+    0 0 15px white;
+
+    animation:sparkleAnim 1.2s linear forwards;
+
+}
+
+@keyframes sparkleAnim{
+
+0%{
+
+transform:scale(0);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:scale(2);
+
+opacity:0;
+
+}
+
+}
+
+/* ==========================================
+          CONFETTI
+========================================== */
+
+.confettiPiece{
+
+    position:absolute;
+
+    width:12px;
+
+    height:18px;
+
+    border-radius:3px;
+
+    animation:confettiFall linear forwards;
+
+}
+
+@keyframes confettiFall{
+
+0%{
+
+transform:
+translateY(-30px)
+rotate(0);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:
+translateY(120vh)
+rotate(720deg);
+
+opacity:0;
+
+}
+
+}
+
+/* ==========================================
+       HEART EXPLOSION
+========================================== */
+
+.explodeHeart{
+
+    position:absolute;
+
+    font-size:28px;
+
+    animation:explodeHeart 1.8s ease-out forwards;
+
+}
+
+@keyframes explodeHeart{
+
+0%{
+
+transform:
+translate(0,0)
+scale(.3);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:
+translate(var(--x),var(--y))
+scale(2);
+
+opacity:0;
+
+}
+
+}
+
+/* ==========================================
+       YES BUTTON GLOW
+========================================== */
+
+#yesBtn{
+
+animation:yesGlow 2s infinite;
+
+}
+
+@keyframes yesGlow{
+
+0%{
+
+box-shadow:
+
+0 0 12px rgba(255,255,255,.4);
+
+}
+
+50%{
+
+box-shadow:
+
+0 0 35px rgba(255,255,255,.9);
+
+}
+
+100%{
+
+box-shadow:
+
+0 0 12px rgba(255,255,255,.4);
+
+}
+
+}
+
+/* ==========================================
+      MOBILE RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+h1{
+
+font-size:2.2rem;
+
+}
+
+h2{
+
+font-size:1.4rem;
+
+}
+
+.glass{
+
+width:92%;
+
+padding:25px;
+
+}
+
+#jerseyImage{
+
+width:190px;
+
+}
+
+.numberGrid{
+
+gap:15px;
+
+}
+
+.numberBtn{
+
+width:95px;
+
+height:95px;
+
+font-size:30px;
+
+}
+
+.optionBtn{
+
+width:100%;
+
+}
+
+#typingMessage{
+
+font-size:18px;
+
+line-height:1.7;
+
+}
+
+button{
+
+font-size:15px;
+
+padding:13px 24px;
+
+}
+
+}
+
+/* ==========================================
+      SMALL DEVICES
+========================================== */
+
+@media(max-width:420px){
+
+#jerseyImage{
+
+width:165px;
+
+}
+
+.typing{
+
+font-size:2rem;
+
+}
+
+.numberBtn{
+
+width:82px;
+
+height:82px;
+
+font-size:28px;
+
+}
+
+}
